@@ -1,31 +1,31 @@
-Shop.get = function(index) {
-  if (index > InMemoryStorage.shops.length){
-    console.log('Error');        //сделать исключение
-  } else {
-  var i = index - 1;
-  return InMemoryStorage.shops[i];
-    }
-}
+// Shop.get = function(index) {
+//   if (index > InMemoryStorage.shops.length){
+//     console.log('Error');        //сделать исключение
+//   } else {
+//   var i = index - 1;
+//   return InMemoryStorage.shops[i];
+//     }
+// }
 
 
-Client.get = function(index) {
-  if (index > InMemoryStorage.clients.length){
-    console.log('Error');        //сделать исключение
-  } else {
-  var i = index - 1;
-  return InMemoryStorage.clients[i];
-    }
-}
+// Client.get = function(index) {
+//   if (index > InMemoryStorage.clients.length){
+//     console.log('Error');        //сделать исключение
+//   } else {
+//   var i = index - 1;
+//   return InMemoryStorage.clients[i];
+//     }
+// }
 
 
-Product.get = function(index) {
-   if (index >InMemoryStorage.products.length){
-    console.log('Error');        //сделать исключение
-  } else {
-  var i = index - 1;
-  return InMemoryStorage.products[i];
-    }
-}
+// Product.get = function(index) {
+//    if (index >InMemoryStorage.products.length){
+//     console.log('Error');        //сделать исключение
+//   } else {
+//   var i = index - 1;
+//   return InMemoryStorage.products[i];
+//     }
+// }
 
 // Shop.getByName = function (str) {
 //   for (var i = InMemoryStorage.shops.length - 1; i >= 0; i--) {
