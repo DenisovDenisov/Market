@@ -2,38 +2,41 @@ function Shop() {
   this.name;
 }
 
-Shop.createFromData = function(userData) {
+function Client() {
+  this.name;
+}
+
+function Product () {
+  this.name;
+}
+
+
+Client.createFromData = function(clientData) {
+  var client = new Client;
+  client.name = clientData.name;
+  client.moneyAmount = clientData.money; //Отдельный метод
+  InMemoryStorage.clients.push(client);
+  return client;
+}
+
+
+Shop.createFromData = function(shopData) {
   var shop = new Shop;
-  shop.name = userData.name;
-  shop.type = userData.type;
-  (function() {
-    InMemoryStorage.shops.push(shop);
-  }());
+  shop.name = shopData.name;
+  shop.type = shopData.type;
+  InMemoryStorage.shops.push(shop);
   return shop;
 }
 
 
-
-Shop.get = function(index) {
-  var i = index - 1;
-  return InMemoryStorage.shops[i];
+Product.createFromData = function(productData) {
+  var product = new Product;
+  product.name = productData.name;
+  product.price = productData.price;
+  InMemoryStorage.products.push(product);
+  return product;
 }
 
-Shop.getByName = function (str) {
-  for (var i = InMemoryStorage.shops.length - 1; i >= 0; i--) {
-    console.log(InMemoryStorage.shops[i]);
-  };
-}
-
-// Использование
 
 
-// var guest = User.createAnonymous();
-// guest.sayHi(); // Аноним
-
-// var knownUser = User.createFromData({
-//   name: 'Вася',
-//   age: 25
-// });
-// knownUser.sayHi();
 

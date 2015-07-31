@@ -1,5 +1,7 @@
-describe("Jasmine", function() {
-  it("makes testing JavaScript awesome!", function() {
-    expect(shop1.name).toBe('shop21');
+describe("", function() {
+  it("", function() {
+    expect(typeof Shop.createFromData({name : 'Shop' , type: 'Hui'})).toEqual('object');
   });
 });
+
+

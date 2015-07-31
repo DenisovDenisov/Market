@@ -1,25 +1,29 @@
 var InMemoryStorage = {
 shops: [],
-products:[{},{},{}]
+products:[],
+clients:[]
 }
 
 //----------
 
  var shop1 = Shop.createFromData({
-    name: "shop21"
+    name: "shop21",
+    type:'sjsjsjs'
 });
 
  var shop2 = Shop.createFromData({
-    name: "shop22"
+    name: "shop22",
+    type: 'sss'
 });
-console.log(shop1);
+
+ var client1 = Client.createFromData({
+    name: 'Dick',
+    money: 200
+ });
 
 
-console.log(InMemoryStorage.shops);
 
 console.log(Shop.get(1));
-
-console.log(Shop.getByName());
 // shop = Shop.get(1);
 // shop2 = Shop.getByName("shop21");
 
