@@ -24,17 +24,25 @@ describe("InMemoryStorage", function() {
       expect(storage2.setId()).toBe(1);
     });
   });
+
+  describe("create", function() {
+    it("должен создать новый экземпляр в хранилище", function() {
+      var storage = new InMemoryStorage();
+      storage.create({name : 'shop1' , city : 'Kazan'});
+      console.log(storage);
+      expect(storage).toBeDefined();
+    });
+
+    it("should return created object with id", function() {
+      var storage = new InMemoryStorage();
+      storage.create({name : 'FFF' , city : 'Kazan'});
+      console.log(storage.get(3));
+    });
+  });
 });
 
 
 
-// describe("Create", function() {
-//   it ("must be defined" , function() {
-//     var storage = new InMemoryStorage();
-//     expect(storage.create({name : 'magaz'})).toBeDefined();
-//   });
-
-// });
 
 // describe("", function() {
 //   it ("must be defined" , function() {
