@@ -44,26 +44,25 @@ describe("InMemoryStorage", function() {
 
 
 
-// describe("", function() {
-//   it ("must be defined" , function() {
-//     var storage = new InMemoryStorage();
-//     expect(storage.create({name : 'magaz'})).toBeDefined();
-//   });
+describe("Update", function() {
+  it ("Вернет обьект с новыми свойствами" , function() {
+    var storage = new InMemoryStorage();
+    storage.create({name : 'm'});
+    storage.update(4 , {city : 'Kazan'});
+    console.log(storage.get(4));
+  });
+});
 
-// });
 
-// describe("Create", function() {
-//   it ("must be defined" , function() {
-//     var storage = new InMemoryStorage();
-//     expect(storage.create({name : 'magaz'})).toBeDefined();
-//   });
 
-// });
 
-// describe("Create", function() {
-//   it ("must be defined" , function() {
-//     var storage = new InMemoryStorage();
-//     expect(storage.create({name : 'magaz'})).toBeDefined();
-//   });
-
-// });
+describe("Delete", function() {
+  it ("Удалит обьект по указанному id" , function() {
+    var storage = new InMemoryStorage();
+    storage.create({name : 'mag'});
+    console.log(storage.get(5));
+    storage.delete(5);
+    console.log(storage.get(5));
+    expect(storage.get(5)).toBeUndefined();
+  });
+ });
