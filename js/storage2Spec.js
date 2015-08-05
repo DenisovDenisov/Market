@@ -66,3 +66,4 @@ describe("Delete", function() {
     expect(storage.get(5)).toBeUndefined();
   });
  });
+

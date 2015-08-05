@@ -15,10 +15,9 @@ InMemoryStorage.prototype.create = function(data) {
 
 };
 
-InMemoryStorage.prototype.get = function(id) {
-    var data = this._storage[id];
-    delete this._storage[id];
-    return data;
+InMemoryStorage.prototype.get = function(arg) {
+    return this._storage[arg];
+
 };
 
 InMemoryStorage.prototype.update = function(id, data) {
@@ -31,4 +30,6 @@ InMemoryStorage.prototype.delete = function(id) {
     delete this._storage[id];
     return data;
 }
+
+// var Shop = new InMemoryStorage();
 
