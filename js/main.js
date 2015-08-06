@@ -1,48 +1,11 @@
-function Shops () {
-  this._shops = {};
-  this._products = {};
-};
 
-Shops.prototype.setId = (function() {
-    var a = 1;
-    return function () {
-        return a++;
-    };
-})();
-
-Shops.prototype.create = function(data){
-  data.id = this.setId();
-  return this._shops[data.id] = data;
-};
-
-Shops.prototype.addProduct = function(data){
-  data.id = this.setId();
-  return this._products[data.id] = data;
-};
-
-
-var Shop = new Shops();
-
-
-
-function Product () {
-
-};
-
-function Client () {
-
-};
-
-
-
-var shop1 = Shop.create({name : 'shop1' , city : 'Kazan'});
-
+// var shop1 = new Shop({name : 'shop1' , city : 'Kazan'});
 // var shop2 = Shop.create({name: 'Shop2', city: 'Moscow'});
 // var shop3 = Shop.create({name: "Shop3", city: "Kazan"});
 // var shop4 = Shop.create({name: "Shop4", city: "Moscow"});
 
 
-shop1.addProduct({name: "T­Shirt", price: 100, amount: 50});
+//shop1.addProduct({name : "T­Shirt" , price : 100 , amount : 50});
 // shop1.addProduct({name: "Cool T­Shirt", price: 200, amount: 50});
 // shop2.addProduct({name: "T­Shirt", price: 150, amount: 10});
 // shop3.addProduct({name: "iPhone 6", price: 50000, amount: 50});
@@ -66,7 +29,7 @@ shop1.addProduct({name: "T­Shirt", price: 100, amount: 50});
 // client.getOrders();
 
 
-console.log(shop1);
+
 
 
 
