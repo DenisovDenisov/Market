@@ -5,7 +5,7 @@
 // var shop4 = Shop.create({name: "Shop4", city: "Moscow"});
 
 
-//shop1.addProduct({name : "T­Shirt" , price : 100 , amount : 50});
+// shop1.addProduct({name : "T­Shirt" , price : 100 , amount : 50});
 // shop1.addProduct({name: "Cool T­Shirt", price: 200, amount: 50});
 // shop2.addProduct({name: "T­Shirt", price: 150, amount: 10});
 // shop3.addProduct({name: "iPhone 6", price: 50000, amount: 50});

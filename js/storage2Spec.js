@@ -1,69 +1,68 @@
 describe("InMemoryStorage", function() {
-  it("must be defined", function() {
-    var storage = new InMemoryStorage();
-    expect(storage).toBeDefined();
-    expect(storage._storage).toBeDefined();
-  });
+    var storage;
+    var data;
+    var returned_data;
+    beforeEach(function() {
+      storage = new InMemoryStorage();
+      data = {
+        name : 'NewShop' , City : 'Kazan'
+      };
+    returned_data = storage.create(data);
+    });
 
-  it("must be an object", function() {
-    var storage = new InMemoryStorage();
-    // console.log(storage.constructor);
-    expect(storage.constructor).toBe(InMemoryStorage);
-  });
+    describe("initialization", function() {
+        it("must be defined", function() {
+
+            expect(storage).toBeDefined();
+            expect(storage._storage).toBeDefined();
+
+        });
+        it("must be an object", function() {
+            expect(storage.constructor).toBe(InMemoryStorage);
+        });
+    });
+    describe("setId", function() {
+        it("should return id", function() {
+            expect(storage.setId()).toBe(1);
+        });
+        it("should separate ids for different storages", function() {
+            var storage1 = new InMemoryStorage();
+            var storage2 = new InMemoryStorage();
+            expect(storage1.setId()).toBe(1);
+            expect(storage2.setId()).toBe(1);
+        });
+    });
+    describe("create", function() {
+        it("should return created object with id", function() {
+            expect(data.id).toBeUndefined();
+            expect(returned_data.id).toBeDefined();
+            expect(data.id).toBeDefined();
+            expect(storage.get(data.id)).toEqual(data);
+        });
+    });
+    describe("Delete", function() {
+        it("Удалит обьект по указанному id", function() {
+            console.log(storage.get(data.id));
+            storage.delete(data.id);
+            console.log(storage.get(data.id));
+            expect(storage.get(data.id)).toBeUndefined();
+        });
+    });
 });
-//   describe("setId", function() {
-//     it("should return id", function() {
-//       var storage = new InMemoryStorage();
-//       expect(storage.setId()).toBe(1);
-//     });
-
-//     xit("should separate ids for different storages", function() {
-//       var storage1 = new InMemoryStorage();
-//       var storage2 = new InMemoryStorage();
-//       expect(storage1.setId()).toBe(1);
-//       expect(storage2.setId()).toBe(1);
-//     });
-//   });
-
-//   describe("create", function() {
-//     it("должен создать новый экземпляр в хранилище", function() {
-//       var storage = new InMemoryStorage();
-//       storage.create({name : 'shop1' , city : 'Kazan'});
-//       console.log(storage);
-//       expect(storage).toBeDefined();
-//     });
-
-//     it("should return created object with id", function() {
-//       var storage = new InMemoryStorage();
-//       storage.create({name : 'FFF' , city : 'Kazan'});
-//       console.log(storage.get(3));
-//     });
-//   });
-// });
-
-
-
-
-// describe("Update", function() {
-//   it ("Вернет обьект с новыми свойствами" , function() {
-//     var storage = new InMemoryStorage();
-//     storage.create({name : 'm'});
-//     storage.update(4 , {city : 'Kazan'});
-//     console.log(storage.get(4));
-//   });
-// });
-
-
-
-
-// describe("Delete", function() {
-//   it ("Удалит обьект по указанному id" , function() {
-//     var storage = new InMemoryStorage();
-//     storage.create({name : 'mag'});
-//     console.log(storage.get(5));
-//     storage.delete(5);
-//     console.log(storage.get(5));
-//     expect(storage.get(5)).toBeUndefined();
-//   });
-//  });
-
+// ShopRepository.prototype.shopSave = function (shop){
+//     var id = this._shops.addData(shop);
+//     shop._id = id;
+//     return shop;
+// }
+// ShopRepository.prototype.shopGetById = function (id){
+//     return this._shops.getData(id);
+// }
+// ShopRepository.prototype.shopUpdate = function (id, data){
+//     return this._shops.updateData(id);
+// }
+// ShopRepository.prototype.shopDelete = function (id){
+//     return this._shops.deleteDataFantomly(id);
+// }
+// ShopRepository.prototype.shopDestroy = function (id){
+//     return this._shops.deleteData(id);
+// }

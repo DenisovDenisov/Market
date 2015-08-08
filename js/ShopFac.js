@@ -1,16 +1,18 @@
-var Objs = {
-  simple : function() {
-  }
+function objMaker () {}
+
+
+objMaker.factory = function (type, data){
+    var constr = type;
+    objMaker[constr].prototype = new objMaker();
+    return new objMaker[constr](data);
 };
 
-function objFactory (data) {
-  this.name = data.name;
+
+objMaker.Shop = function (data) {
+    this._name = data.name;
+    this._owner = data.owner;
 };
 
 
-objFactory.prototype = {
-    constructor: objFactory,
-    makeSimpleObj: function () {
-        return new Objs.simple();
-    }
-}
+
+
