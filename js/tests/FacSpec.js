@@ -7,6 +7,6 @@ describe("Fabrique", function() {
             name: 'ffff'
         });
         expect(typeof object).toBe('object');
-        console.log(object);
+        // console.log(object);
     });
 });

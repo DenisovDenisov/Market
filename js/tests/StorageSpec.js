@@ -7,7 +7,8 @@ describe("InMemoryStorage", function() {
       data = {
         name : 'NewShop' , City : 'Kazan'
       };
-    returned_data = storage.create(data);
+      returned_data = storage.create(data);
+
     });
 
     describe("initialization", function() {
@@ -23,7 +24,7 @@ describe("InMemoryStorage", function() {
     });
     describe("setId", function() {
         it("should return id", function() {
-            expect(storage.setId()).toBe(1);
+            expect(storage.setId()).toBe(2);
         });
         it("should separate ids for different storages", function() {
             var storage1 = new InMemoryStorage();
@@ -34,7 +35,6 @@ describe("InMemoryStorage", function() {
     });
     describe("create", function() {
         it("should return created object with id", function() {
-            expect(data.id).toBeUndefined();
             expect(returned_data.id).toBeDefined();
             expect(data.id).toBeDefined();
             expect(storage.get(data.id)).toEqual(data);
@@ -42,27 +42,10 @@ describe("InMemoryStorage", function() {
     });
     describe("Delete", function() {
         it("Удалит обьект по указанному id", function() {
-            console.log(storage.get(data.id));
+            // console.log(storage.get(data.id));
             storage.delete(data.id);
-            console.log(storage.get(data.id));
+            // console.log(storage.get(data.id));
             expect(storage.get(data.id)).toBeUndefined();
         });
     });
 });
-// ShopRepository.prototype.shopSave = function (shop){
-//     var id = this._shops.addData(shop);
-//     shop._id = id;
-//     return shop;
-// }
-// ShopRepository.prototype.shopGetById = function (id){
-//     return this._shops.getData(id);
-// }
-// ShopRepository.prototype.shopUpdate = function (id, data){
-//     return this._shops.updateData(id);
-// }
-// ShopRepository.prototype.shopDelete = function (id){
-//     return this._shops.deleteDataFantomly(id);
-// }
-// ShopRepository.prototype.shopDestroy = function (id){
-//     return this._shops.deleteData(id);
-// }

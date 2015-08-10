@@ -1,4 +1,6 @@
-function InMemoryStorage () {
+
+
+var InMemoryStorage = function  () {
     this._storage = {};
     this.setId = InMemoryStorage.prototype.setId();
 }
@@ -22,8 +24,8 @@ InMemoryStorage.prototype.createImmutable = function(data) {
     return this._storage[id] = new_data;
 };
 
-InMemoryStorage.prototype.get = function(arg) {
-    return this._storage[arg];
+InMemoryStorage.prototype.get = function(id) {
+    return this._storage[id];
 
 };
 
