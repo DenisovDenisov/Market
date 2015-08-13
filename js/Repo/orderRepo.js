@@ -5,8 +5,8 @@ function Order () {
 Order.prototype = Object.create(Repository.prototype);
 Order.prototype.constructor = Order;
 
-Order.prototype. = function(data) {
+// sOrder.prototype. = function(data) {
 
-};
+// };
 
 var orders = new Order();

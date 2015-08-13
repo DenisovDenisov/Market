@@ -17,8 +17,10 @@ module.exports = function(config) {
     files: [
       'js/main.js',
       'js/Factories/Factory.js',
+
       'js/Storage.js',
       'js/Repo/Repo.js',
+      'js/Factories/shopFac.js',
       'js/Repo/shopRepo.js',
       'js/Repo/prodRepo.js',
       'js/Repo/orderRepo.js',

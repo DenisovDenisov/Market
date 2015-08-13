@@ -30,7 +30,7 @@ describe("Repository" , function() {
     shop = Shops.create('Shop' , data);
   })
 
-describe("Init" , function() {
+xdescribe("Init" , function() {
   it("Must be defined" , function() {
     expect(Shops).toBeDefined();
     expect(Products).toBeDefined();

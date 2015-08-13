@@ -4,8 +4,8 @@ function Repository() {
 };
 
 
-Repository.prototype.create = function (Obj,data) {
-    var newobj = objMaker.factory(Obj,data);
+Repository.prototype.create = function (data) {
+    var newobj = objMaker.factory(data);
     var newobjId = this._repo.create(newobj);
     return newobjId;
 }
