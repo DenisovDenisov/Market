@@ -1,8 +1,8 @@
 
 // var shop1 = new Shop({name : 'shop1' , city : 'Kazan'});
-// var shop2 = Shop.create({name: 'Shop2', city: 'Moscow'});
-// var shop3 = Shop.create({name: "Shop3", city: "Kazan"});
-// var shop4 = Shop.create({name: "Shop4", city: "Moscow"});
+ // var shop2 = Shops.create({name: 'Shop2', city: 'Moscow'});
+ // var shop3 = Shops.create({name: 'Shop3', city: 'Kazan'});
+ // var shop4 = Shops.create({name: 'Shop4', city: 'oscow'});
 
 
 // shop1.addProduct({name : "T­Shirt" , price : 100 , amount : 50});

@@ -25,8 +25,4 @@ Repository.prototype.update = function(id,data) {
 };
 
 
-var Shops = new Repository();
-var Products = new Repository();
-var Customers = new Repository();
-
 

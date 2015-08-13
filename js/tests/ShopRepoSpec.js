@@ -17,9 +17,7 @@
 // console.log(product1);
 
 
-
-var shop = Shops.create('Shop' , {name : "EEEEE"});
-console.log(shop);
+var shop = Shops.create('Shop', {name : 'Mag'});
 
 
 

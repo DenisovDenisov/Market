@@ -16,13 +16,16 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'js/main.js',
-      'js/ShopFac.js',
+      'js/Factories/Factory.js',
       'js/Storage.js',
-      'js/ShopRepo.js',
+      'js/Repo/Repo.js',
+      'js/Repo/shopRepo.js',
+      'js/Repo/prodRepo.js',
+      'js/Repo/orderRepo.js',
+      'js/Repo/custRepo.js',
       'js/tests/ShopRepoSpec.js',
       'js/tests/StorageSpec.js',
       'js/tests/FacSpec.js'
-
     ],
 
 
