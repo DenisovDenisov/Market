@@ -15,22 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'js/main.js',
-      'js/Factories/Factory.js',
-
-      'js/Storage.js',
-      'js/Repo/Repo.js',
-      'js/Factories/shopFac.js',
-      'js/Repo/shopRepo.js',
-      'js/Repo/prodRepo.js',
-      'js/Repo/orderRepo.js',
-      'js/Repo/custRepo.js',
-      'js/tests/ShopRepoSpec.js',
-      'js/tests/StorageSpec.js',
-      'js/tests/FacSpec.js'
+      'js/app/other.js',
+      'js/app/Storage.js',
+      'js/app/Repo/*.js',
+      'js/app/Entities/*.js',
+      'js/app/main.js',
+      'js/tests/*.js'
     ],
-
-
     // list of files to exclude
     exclude: [
     ],
